@@ -16,13 +16,13 @@ DAX – Custom KPIs and calculated measures
 
 🧩 Dataset
 
-A synthetic dataset of 500 employees with the following key fields:
+A dataset of 500 employees with the following key fields:
 
-Category	Example Columns
-Demographics	Age, Gender, Country, Education_Level
-Work Info	Employment_Type, Industry, Department, Years_Experience
-Mental Health	Stress_Level, Has_Mental_Health_Issue, Treatment_Sought
-Productivity	Self_Reported_Productivity, Burnout_Symptoms, Sleep_Hours
-Support & Environment	Manager_Support_Level, Company_Support, Work_Life_Balance
+Category	                                      Example Columns
+Demographics	                  Age, Gender, Country, Education_Level
+Work Info	                      Employment_Type, Industry, Department, Years_Experience
+Mental Health	                  Stress_Level, Has_Mental_Health_Issue, Treatment_Sought
+Productivity	                  Self_Reported_Productivity, Burnout_Symptoms, Sleep_Hours
+Support & Environment	          Manager_Support_Level, Company_Support, Work_Life_Balance
 
 📁 File: mental_health_productivity_dataset.csv
