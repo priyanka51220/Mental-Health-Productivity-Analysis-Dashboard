@@ -1,28 +1,83 @@
-# Mental-Health-Productivity-Analysis-Dashboard
-An end-to-end data analysis and visualization project exploring the relationship between mental health, stress, and productivity in the workplace. The project covers data cleaning, EDA, and interactive Power BI dashboards to uncover actionable insights.
+# 🧠 Mental Health & Productivity Analysis Dashboard
 
-📊 Project Overview
+An end-to-end data analysis and visualization project exploring the relationship between **mental health, stress, and productivity** in the workplace.  
+This project covers **data cleaning, exploratory data analysis (EDA)**, and an **interactive Power BI dashboard** to uncover actionable insights.
 
-This project analyzes how various factors — such as remote work, stress level, work-life balance, and company support — influence employee productivity and mental health outcomes.
+---
 
-Tech Stack:
+## 📊 Project Overview
 
-Python (Pandas, NumPy, Seaborn, Matplotlib) – Data cleaning & EDA
+This project analyzes how factors such as **remote work, stress level, work-life balance, and company support** influence employee productivity and mental health outcomes.
 
-Power BI – Interactive dashboard creation
+**Tech Stack:**
+- 🐍 Python (Pandas, NumPy, Seaborn, Matplotlib) – Data Cleaning & EDA  
+- 📊 Power BI – Dashboard creation & KPI visualization  
+- 🔢 DAX – Custom calculated measures  
 
-DAX – Custom KPIs and calculated measures
+---
 
+## 🧩 Dataset
 
-🧩 Dataset
+A synthetic dataset of **500 employees** with the following key columns:
 
-A dataset of 500 employees with the following key fields:
+| Category | Example Columns |
+|-----------|-----------------|
+| Demographics | `Age`, `Gender`, `Country`, `Education_Level` |
+| Work Info | `Employment_Type`, `Industry`, `Department`, `Years_Experience` |
+| Mental Health | `Stress_Level`, `Has_Mental_Health_Issue`, `Treatment_Sought` |
+| Productivity | `Self_Reported_Productivity`, `Burnout_Symptoms`, `Sleep_Hours` |
+| Support & Environment | `Manager_Support_Level`, `Company_Support`, `Work_Life_Balance` |
 
-Category	                                      Example Columns
-Demographics	                  Age, Gender, Country, Education_Level
-Work Info	                      Employment_Type, Industry, Department, Years_Experience
-Mental Health	                  Stress_Level, Has_Mental_Health_Issue, Treatment_Sought
-Productivity	                  Self_Reported_Productivity, Burnout_Symptoms, Sleep_Hours
-Support & Environment	          Manager_Support_Level, Company_Support, Work_Life_Balance
+📁 **File:** `mental_health_productivity_dataset.csv`
 
-📁 File: mental_health_productivity_dataset.csv
+---
+
+## 🔍 Data Analysis & EDA
+
+Performed:
+- Handling missing values & outliers  
+- Encoding categorical variables  
+- Visualizing relationships between stress, productivity, and work conditions  
+
+**Key Insights:**
+- Higher **stress levels** are linked to lower **productivity** and **job satisfaction**  
+- Employees with **remote work** show better **work-life balance**  
+- Strong **manager & peer support** reduces burnout  
+
+🧰 **Example Visuals:**
+- Correlation Heatmap  
+- Stress vs Productivity Scatterplot  
+- Treatment by Age & Gender Distribution  
+
+---
+
+## 📈 Power BI Dashboard
+
+The Power BI dashboard visualizes:
+
+| Insight | Visual | Fields |
+|----------|---------|--------|
+| Gender Distribution | Bar Chart | Gender, Count(Employee_ID) |
+| Treatment by Age Group | Column Chart | Age_Group, % Treated |
+| Remote vs On-site | Donut Chart | Remote_Work, Treatment Rate % |
+| Stress Interference by Department | Clustered Bar | Department, Avg(Work_Interfere) |
+| Stress vs Productivity | Scatter Plot | Stress_Level, Self_Reported_Productivity |
+| Work-Life Balance vs Remote | Box Plot | Remote_Work, Work_Life_Balance |
+| KPIs | Cards | Avg Productivity, Avg Stress, % Treated |
+
+**Interactive Features:**
+- Slicers for Country, Gender, and Remote Work  
+- Dynamic KPI Cards  
+- Calming blue/green color theme  
+
+---
+
+## 🧮 DAX Measures
+
+```DAX
+Treatment Rate % = 
+DIVIDE(SUM('data'[Treatment_Sought]), COUNT('data'[Employee_ID]), 0)
+
+Avg Productivity = AVERAGE('data'[Self_Reported_Productivity])
+
+Avg Stress = AVERAGE('data'[Stress_Level])
