@@ -35,16 +35,16 @@ A dataset of **500 employees** with the following key columns:
 ## 🔍 Data Analysis & EDA
 
 Performed:
-- Handling missing values & outliers  
+- Handling missing values & outliers
 - Encoding categorical variables  
-- Visualizing relationships between stress, productivity, and work conditions  
+- Visualizing relationships between stress, productivity, and work conditions
 
 **Key Insights:**
 - Higher **stress levels** are linked to lower **productivity** and **job satisfaction**  
 - Employees with **remote work** show better **work-life balance**  
 - Strong **manager & peer support** reduces burnout  
 
-🧰 **Example Visuals:**
+🧰 **Visuals:**
 - Correlation Heatmap  
 - Stress vs Productivity Scatterplot  
 - Treatment by Age & Gender Distribution  
@@ -72,12 +72,37 @@ The Power BI dashboard visualizes:
 
 ---
 
+
 ## 🧮 DAX Measures
 
 ```DAX
-Treatment Rate % = 
-DIVIDE(SUM('data'[Treatment_Sought]), COUNT('data'[Employee_ID]), 0)
+Treatment Rate % = DIVIDE(SUM('data'[Treatment_Sought]), COUNT('data'[Employee_ID]), 0)
 
 Avg Productivity = AVERAGE('data'[Self_Reported_Productivity])
 
 Avg Stress = AVERAGE('data'[Stress_Level])
+
+```
+
+## 🧠 Future Improvements
+
+Add predictive modeling for burnout or productivity using ML techniques
+
+Integrate with live HR survey or employee wellness datasets
+
+Implement advanced Power BI drill-through and drill-down analysis for deeper insights
+
+Enhance dashboard with additional KPIs like absenteeism trends or mental health benefit usage
+
+---
+
+## 🚀 Project Highlights
+
+End-to-end workflow: Data Cleaning → EDA → Dashboard
+
+Discovered insights on mental health & workplace productivity
+
+Built a Power BI dashboard for real-time data storytelling
+
+---
+
