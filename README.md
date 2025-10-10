@@ -18,7 +18,7 @@ This project analyzes how factors such as **remote work, stress level, work-life
 
 ## 🧩 Dataset
 
-A synthetic dataset of **500 employees** with the following key columns:
+A dataset of **500 employees** with the following key columns:
 
 | Category | Example Columns |
 |-----------|-----------------|
